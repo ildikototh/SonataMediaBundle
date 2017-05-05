@@ -33,6 +33,18 @@ class MediaAdmin extends Admin
     }
 
     /**
+     * Overwrite Sonata Admin default order
+     *
+     * @var array
+     */
+    protected $datagridValues = array(
+        '_page' => 1,
+        '_per_page' => 25,
+        '_sort_order' => 'DESC',
+        '_sort_by' => 'createdAt',
+    );
+    
+    /**
      * {@inheritdoc}
      */
     public function createQuery($context = 'list')
